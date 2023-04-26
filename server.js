@@ -6,7 +6,8 @@ const path = require('path');
 app.use('/static', express.static('public'))
 
 app.get('/', (req,res) => {
-    res.sendFile("public", path.join(__dirname, "public"))
+    res.sendFile("server.js", path.join(__dirname, "public"))
+    console.log('Hello world')
 })
 
 app.listen(port, () =>{
